@@ -37,7 +37,7 @@ function updateNavButtons() {
   const leftButton = document.querySelector(".nav-btn.left");
   const rightButton = document.querySelector(".nav-btn.right");
 
-  // Hide buttons if scrolling isn't needed
+  // Hide buttons if scrolling isn't needed or if screen size is small
   if (window.matchMedia("(max-width: 768px)").matches) {
     leftButton.style.display = "none";
     rightButton.style.display = "none";
@@ -76,4 +76,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Initialize button visibility
   updateNavButtons();
+
+  // Recalculate button visibility on window resize
+  window.addEventListener("resize", updateNavButtons);
 });
