@@ -4,8 +4,7 @@ function toggleMenu() {
   navLinks.style.display = navLinks.style.display === "flex" ? "none" : "flex";
 }
 
-//Slider for container DnevnaDoza
-
+// Slider for container DnevnaDoza
 let currentIndex = 0;
 
 function slide(direction) {
@@ -35,13 +34,21 @@ function updateNavButtons() {
   const totalWidth = cards.length * cardWidth;
   const visibleWidth = sliderInner.offsetWidth;
 
+  const leftButton = document.querySelector(".nav-btn.left");
+  const rightButton = document.querySelector(".nav-btn.right");
+
   // Hide buttons if scrolling isn't needed
-  document.querySelector(".nav-btn.left").style.display =
-    currentIndex === 0 ? "none" : "block";
-  document.querySelector(".nav-btn.right").style.display =
-    currentIndex * cardWidth + visibleWidth >= totalWidth ? "none" : "block";
+  if (window.matchMedia("(max-width: 768px)").matches) {
+    leftButton.style.display = "none";
+    rightButton.style.display = "none";
+  } else {
+    leftButton.style.display = currentIndex === 0 ? "none" : "block";
+    rightButton.style.display =
+      currentIndex * cardWidth + visibleWidth >= totalWidth ? "none" : "block";
+  }
 }
 
+// Touch events for swipe gestures
 let startX = 0;
 let endX = 0;
 
@@ -61,85 +68,12 @@ function handleTouchEnd() {
 // Initialize
 document.addEventListener("DOMContentLoaded", () => {
   const slider = document.querySelector(".slider-inner");
+
+  // Add touch event listeners for mobile swipe
   slider.addEventListener("touchstart", handleTouchStart, { passive: true });
   slider.addEventListener("touchmove", handleTouchMove, { passive: true });
   slider.addEventListener("touchend", handleTouchEnd);
 
-  updateNavButtons(); // Initialize button visibility
+  // Initialize button visibility
+  updateNavButtons();
 });
-
-//END of slider container DnevnaDoza
-
-/*
-// Animation for the midtext spans
-const midtextSpans = document.querySelectorAll(".midtext span");
-let colorIndex = 0;
-
-const colors = [
-  "orange",
-  "green",
-  "pink",
-  "red",
-  "brown",
-  "purple",
-  "blue",
-  "yellow",
-];
-
-// Function to animate spans with movement and circular rotation
-function animateMidtextSpans() {
-  midtextSpans.forEach((span, index) => {
-    // Change color periodically
-    setInterval(() => {
-      span.style.color = colors[colorIndex];
-      colorIndex = (colorIndex + 1) % colors.length;
-    }, 1000); // Change color every 1 second
-  });
-}
-
-// Trigger the animation when the page is loaded
-window.onload = () => {
-  animateMidtextSpans();
-};
-
-/*
-// JavaScript to toggle the navigation menu visibility on smaller screens
-function toggleMenu() {
-  const navLinks = document.querySelector(".nav-links");
-  navLinks.style.display = navLinks.style.display === "flex" ? "none" : "flex";
-}
-
-// Animation for the midtext spans
-const midtextSpans = document.querySelectorAll(".midtext span");
-let colorIndex = 0;
-
-const colors = [
-  "orange",
-  "green",
-  "pink",
-  "red",
-  "brown",
-  "purple",
-  "blue",
-  "yellow",
-];
-
-// Function to animate spans with movement and circular rotation
-function animateMidtextSpans() {
-  midtextSpans.forEach((span, index) => {
-    // Add circular movement and horizontal transition
-    span.style.animation = `moveAndSpin 4s infinite ease-in-out ${index * 2}s`;
-
-    // Change color periodically
-    setInterval(() => {
-      span.style.color = colors[colorIndex];
-      colorIndex = (colorIndex + 1) % colors.length;
-    }, 2000); // Change color every 1 second
-  });
-}
-
-// Trigger the animation when the page is loaded
-window.onload = () => {
-  animateMidtextSpans();
-};
-*/
