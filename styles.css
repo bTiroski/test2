@@ -459,6 +459,12 @@ body {
   .nav-btn {
     display: none;
   }
+  
+  .slider-inner {
+    display: block;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch; /* For smooth scrolling on iOS */
+  }
 
   .card {
     width: 50%;
