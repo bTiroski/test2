@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DozaSmoothies</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&amp;family=Roboto:wght@400;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="header">
+      <img
+        alt="Doza Smoothies Logo"
+        height="50"
+        src="images/logo.png"
+        width="100"
+      />
+      <div class="nav-container">
+        <!-- Hamburger Menu -->
+        <div class="hamburger" onclick="toggleMenu()">
+          <i class="fas fa-bars"></i>
+        </div>
+
+        <!-- Navigation Links -->
+        <div class="nav-links">
+          <a href="#"> ПРОДУКТИ </a>
+          <a href="#"> ИЗРАБОТКА </a>
+          <a href="#"> ЗА КОМПАНИИ </a>
+          <a href="#"> НАРАЧАЈ </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero">
+      <img
+        alt="Smoothie and Package"
+        height="600"
+        src="images/Rectangle 38.png"
+        width="1200"
+      />
+      <div class="hero-text">Bland &amp; Sip</div>
+    </div>
+    <div class="content">
+      <h1>Дневна доза здравје</h1>
+      <p>
+        Дневна доза здравјеДневна доза здравјеДневна доза здравјеДневна доза
+        здравјеДневна доза здравјеДневна доза здравјеДневна доза здравјеДневна
+        доза здравјеДневна доза здравјеДневна доза здравјеДневна доза
+        здравјеДневна доза здравје
+      </p>
+    </div>
+    <!-- TEXT COLOR -->
+    <div class="midtext">
+      <span style="color: orange">DaylyDose</span>
+      <span style="color: green">DaylyDose</span>
+      <span style="color: pink">DaylyDose</span>
+      <span style="color: red">DaylyDose</span>
+      <span style="color: brown">DaylyDose</span>
+    </div>
+
+    <!-- DNEVNADOZA CONTAINER -->
+
+    <div class="container-dnevnaDoza">
+      <div class="title">ПРОНАЈДИ ЈА ТВОЈАТА ДОЗА</div>
+      <div class="slider">
+        <button class="nav-btn left" onclick="slide(-1)">&#10094;</button>
+        <div class="slider-inner" id="slider-inner">
+          <div class="card">
+            <img alt="Green leafy vegetables" src="images/green.png" />
+            <div class="card-content">
+              <div class="card-title vital">Vital doza</div>
+              <div class="card-subtitle">Дневна доза здравје</div>
+              <a class="order-btn vital" href="#">НАРАЧАЈ</a>
+            </div>
+          </div>
+          <div class="card">
+            <img alt="Dark berries" src="images/brown.png" />
+            <div class="card-content">
+              <div class="card-title power">Power doza</div>
+              <div class="card-subtitle">Дневна доза здравје</div>
+              <a class="order-btn power" href="#">НАРАЧАЈ</a>
+            </div>
+          </div>
+          <div class="card">
+            <img alt="Yellow spices" src="images/orange.png" />
+            <div class="card-content">
+              <div class="card-title spice">Spice doza</div>
+              <div class="card-subtitle">Дневна доза здравје</div>
+              <a class="order-btn spice" href="#">НАРАЧАЈ</a>
+            </div>
+          </div>
+          <div class="card">
+            <img alt="Red fruits" src="images/pink.png" />
+            <div class="card-content">
+              <div class="card-title red">Red doza</div>
+              <div class="card-subtitle">Дневна доза здравје</div>
+              <a class="order-btn red" href="#">НАРАЧАЈ</a>
+            </div>
+          </div>
+        </div>
+        <button class="nav-btn right" onclick="slide(1)">&#10095;</button>
+      </div>
+    </div>
+
+    <!-- HERO IMAGE CONTAINER -->
+    <div class="hero">
+      <img
+        alt="Smoothie and Package"
+        height="600"
+        src="images/pinkStraw.png"
+        width="1200"
+      />
+      <div class="hero-text">Taste &amp; Sip</div>
+    </div>
+
+    <!-- BLOG CONTAINER -->
+    <div class="container-blog">
+      <div class="title">КАКО СЕ ПОДГОТВУВА?</div>
+      <div class="subtitle">
+        Дневна доза здравје Дневна доза здравјеДневна доза здравјеДневна доза
+        здравјеДневна доза здравје
+      </div>
+
+      <div class="cards-bolg">
+        <div class="card-blog">
+          <img alt="make1" height="200" src="images/make1.png" width="300" />
+          <div class="card-title">КАКО СЕ ПОДГОТВУВА?</div>
+          <div class="card-text">
+            Дневна доза здравје Дневна доза здравјеДневна доза здравје
+          </div>
+        </div>
+        <div class="card-blog">
+          <img
+            alt="Chef preparing food in a kitchen"
+            height="200"
+            src="images/make2.png"
+            width="300"
+          />
+          <div class="card-title">КАКО СЕ ПОДГОТВУВА?</div>
+          <div class="card-text">
+            Дневна доза здравје Дневна доза здравјеДневна доза здравје
+          </div>
+        </div>
+        <div class="card-blog">
+          <img
+            alt="Hand operating a kitchen appliance"
+            height="200"
+            src="images/make3.png"
+            width="300"
+          />
+          <div class="card-title">КАКО СЕ ПОДГОТВУВА?</div>
+          <div class="card-text">
+            Дневна доза здравје Дневна доза здравјеДневна доза здравје
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div>
+        <img
+          alt="logo"
+          height="50"
+          src="images/logo.png"
+          width="100"
+          color="white"
+        />
+      </div>
+      <div>
+        <h3>Explore</h3>
+        <a href="#">Продукти</a>
+        <a href="#">Изработка</a>
+        <a href="#">Контакт</a>
+        <a href="#">Нарачај</a>
+      </div>
+      <div>
+        <h3>Follow us</h3>
+        <a href="#">Facebook</a>
+        <a href="#">Instagram</a>
+        <a href="#">Threat's</a>
+        <a href="#">TikTok</a>
+      </div>
+      <div>
+        <h3>Let's be friends</h3>
+        <p>Дневна доза Дневна доза Дневна доза Дневна доза</p>
+        <input placeholder="Email" type="email" />
+        <textarea placeholder="Message"></textarea>
+        <button>НАРАЧАЈ</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
