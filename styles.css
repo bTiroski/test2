@@ -305,6 +305,7 @@ body {
 
   .hamburger {
     display: block;
+    postion: sticky;
   }
 
   .hero-text {
